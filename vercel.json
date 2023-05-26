@@ -6,9 +6,6 @@
     },
     "env": {
       "SANITY_STUDIO_API_PROJECT_ID": "za67mo9l"
-    },
-    "functions": {
-      "api/**/*.js": {}
     }
   }
   
