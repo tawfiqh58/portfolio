@@ -9,16 +9,14 @@ export async function sharedMetaData(params) {
   return {
     // metadataBase: new URL(settings.url),
     title: {
-      default:
-        settings?.title ||
-        "Stablo - Blog Template for Next.js & Sanity CMS",
-      template: "%s | Stablo"
+      default: settings?.title || "Tawfiq Hasan",
+      template: "%s | NextJS"
     },
     description:
       settings?.description ||
-      "Stablo - popular open-source next.js and sanity blog template",
+      "Passionate full stack developer",
     keywords: ["Next.js", "Sanity", "Tailwind CSS"],
-    authors: [{ name: "Surjith" }],
+    authors: [{ name: "Tawfiq" }],
     canonical: settings?.url,
     openGraph: {
       images: [
@@ -32,7 +30,7 @@ export async function sharedMetaData(params) {
       ]
     },
     twitter: {
-      title: settings?.title || "Stablo Template",
+      title: settings?.title || "Tawfiq Hasan",
       card: "summary_large_image"
     },
     robots: {

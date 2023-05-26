@@ -9,30 +9,27 @@ export default function About({ authors, settings }) {
 
   return (
     <Container>
-      <h1 className="text-brand-primary mb-3 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
-        About
+      <h1 className="text-brand-primary mb-2 mt-2 text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
+        About Me
       </h1>
       <div className="text-center">
-        <p className="text-lg">We are a small passionate team.</p>
+        <p className="text-lg">
+          I am a passionate developer and great leader.
+        </p>
       </div>
 
-      <div className="mb-16 mt-6 md:mb-32 md:mt-16">
-        <div
-          key={author._id}
-          className="relative aspect-square overflow-hidden rounded-md odd:translate-y-10 odd:md:translate-y-16">
-          <Link href={`/author/${author.slug}`}>
-            <Image
-              src={imageProps.src}
-              alt={author.name || " "}
-              fill
-              sizes="(max-width: 320px) 100vw, 320px"
-              className="object-cover"
-            />
-          </Link>
+      <div className="mb-6 mt-5">
+        <div class="relative m-auto h-60 w-60">
+          <Image
+            src={"/img/tawfiq.jpg"}
+            alt={author.name || "Tawfiq Hasan "}
+            fill
+            className="object-cover"
+          />
         </div>
       </div>
 
-      <div className="prose mx-auto mt-14 text-center dark:prose-invert">
+      <div className="prose mx-auto mt-6 text-center dark:prose-invert">
         <p>
           We provide real-time connectivity to enable software
           providers and financial institutions to build integrated
