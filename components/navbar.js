@@ -30,17 +30,6 @@ export default function Navbar(props) {
     {
       label: "Archive",
       href: "/archive"
-    },
-    {
-      label: "Pro Version",
-      href: "https://stablo-pro.web3templates.com/",
-      external: true,
-      badge: "new"
-    },
-    {
-      label: "Download",
-      href: "https://web3templates.com/templates/stablo-minimal-blog-website-template",
-      external: true
     }
   ];
 
