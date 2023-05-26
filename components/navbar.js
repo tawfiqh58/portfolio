@@ -13,23 +13,15 @@ import { myLoader } from "@/utils/all";
 export default function Navbar(props) {
   const leftmenu = [
     {
-      label: "Home",
-      href: "/"
-    },
-    {
       label: "About",
       href: "/about"
-    },
-    {
-      label: "Contact",
-      href: "/contact"
     }
   ];
 
   const rightmenu = [
     {
-      label: "Archive",
-      href: "/archive"
+      label: "Hire me!",
+      href: "/contact"
     }
   ];
 

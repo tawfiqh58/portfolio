@@ -1,48 +1,37 @@
 # Portfolio site
 
-Inspired by nextjs Stablo Blog Template
+Required
 
-- Create new Repository in Github
-- Create a Sanity Project
-- Install Sanity Integration in Vercel
-- Add required CORS & API settings in the project
-- Deploy Frontend to Vercel
+- Github Repository
+- Sanity Project
+- Vercel Project and Integration
+- Add CORS & API
+- Deploy using `git push`
 
-Once cloned, run the following command from the project's root directory. This will link your vercel project.
+Create link between your project and vercel
 
-```bash
-npx vercel link
-```
+$ npx vercel link
 
-Now, run the following command to pull the `.env` variables to your local system.
+To pull the `.env` variables from vercel
 
-```bash
-npx vercel env pull
-```
+$ npx vercel env pull
 
-a new `.env.local` file has been created
-or use example env
+`.env.local` file will be created
+or use `env.local.example`
 
-```bash
-npm install -g @sanity/cli
-
-sanity login
-```
+$ npm install -g @sanity/cli
+$ sanity login
 
 upload demo content
 located at `/lib/sanity/data/production.tar.gz`
 
-```bash
 $ npm run sanity-import
-```
 
 Sanity Studio access: http://localhost:3000/studio
 or
 you can run it on a separately
 
-```bash
-npm run sanity
-```
+$ npm run sanity
 
 https://localhost:3333
 
@@ -52,8 +41,6 @@ https://localhost:3333
 or
 manual deployment command
 
-```bash
-npx vercel --prod
-```
-
-or manually go to vercel dashboard and redeploy it
+$ npx vercel --prod
+or
+manually deploy it from vercel dashboard
