@@ -1,11 +1,11 @@
 {
     "build": {
       "env": {
-        "SANITY_API_TOKEN": "@sanity/sk5xJzDRe6zk1RBetfpicmcjrBxpchhirA3EAiCNVHAW94JvBErviHLk1PqTzZKaZrqFdozAsiQcCJiOMctsTV5MFrAMTIF07TjPVcMHybO8hhaA2HdXZL27HRBp3zwm8zCUQUTh2kiGQk6UeIuX4QDbmH1kjD5LUQEszLJU3SJsaeBaNWhU"
+        "SANITY_API_TOKEN": "sk5xJzDRe6zk1RBetfpicmcjrBxpchhirA3EAiCNVHAW94JvBErviHLk1PqTzZKaZrqFdozAsiQcCJiOMctsTV5MFrAMTIF07TjPVcMHybO8hhaA2HdXZL27HRBp3zwm8zCUQUTh2kiGQk6UeIuX4QDbmH1kjD5LUQEszLJU3SJsaeBaNWhU"
       }
     },
     "env": {
-      "SANITY_STUDIO_API_PROJECT_ID": "@sanity/za67mo9l"
+      "SANITY_STUDIO_API_PROJECT_ID": "za67mo9l"
     },
     "functions": {
       "api/**/*.js": {

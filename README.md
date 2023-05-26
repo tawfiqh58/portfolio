@@ -55,3 +55,5 @@ manual deployment command
 ```bash
 npx vercel --prod
 ```
+
+or manually go to vercel dashboard and redeploy it
