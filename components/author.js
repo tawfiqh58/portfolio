@@ -18,10 +18,10 @@ export default function Author() {
       </h1>
       <div class="mx-auto mt-2 flex max-w-xl flex-col px-5 text-center text-gray-500">
         <p>
-          Tawfiq Hasan is a Full Stack Developer and a DevOps
-          Enthusiast Certified IPE Engineer. A Team Lead at
-          TheDeveloperX, specializing in the use of cloud
-          infrastructure and software architecture and automation at
+          Full Stack Developer, DevOps
+          Enthusiast and a Certified IPE Engineer having more than 5 years of experience on building web application and mobile apps. A Team Lead at
+          TheDeveloperX, specialized in cloud
+          infrastructure, software architecture and automation at
           scale.
         </p>
       </div>
