@@ -18,13 +18,23 @@ export default function Author() {
       </h1>
       <div class="mx-auto mt-2 flex max-w-xl flex-col px-5 text-center text-gray-500">
         <p>
-          Full Stack Developer, DevOps
-          Enthusiast and a Certified IPE Engineer having more than 5 years of experience on building web application and mobile apps. A Team Lead at
-          TheDeveloperX, specialized in cloud
-          infrastructure, software architecture and automation at
-          scale.
+          Full Stack Developer, DevOps Enthusiast and a Certified IPE
+          Engineer having more than 5 years of experience on building
+          web application and mobile apps. A Team Lead at
+          TheDeveloperX, specialized in cloud infrastructure, software
+          architecture and automation at scale.
         </p>
       </div>
+      <button class="group relative h-12 w-48 overflow-hidden rounded-2xl bg-green-500 text-lg font-bold text-white">
+        Hire me!
+        <div class="absolute inset-0 h-full w-full scale-0 rounded-2xl transition-all duration-300 group-hover:scale-100 group-hover:bg-white/30"></div>
+      </button>
+      {/* <button class="group relative h-12 w-48 overflow-hidden rounded-lg bg-white text-lg shadow">
+        <div class="absolute inset-0 w-3 bg-amber-400 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
+        <span class="relative text-black group-hover:text-white">
+          Hover me!
+        </span>
+      </button> */}
     </div>
   );
 }
