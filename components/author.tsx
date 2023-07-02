@@ -20,7 +20,7 @@ export default function Author({ children }) {
   }
 
   return (
-    <div className="mb-8 mt-16 flex flex-col items-center justify-center">
+    <div className="mb-8 mt-8 flex flex-col items-center justify-center">
       <div className="relative h-24 w-24 overflow-hidden rounded-full">
         <Image
           src={'/img/tawfiq.jpg'}
@@ -30,10 +30,10 @@ export default function Author({ children }) {
           className="object-cover"
         />
       </div>
-      <h1 className="text-brand-primary mt-3 text-3xl font-semibold tracking-tight dark:text-white lg:text-3xl lg:leading-tight">
+      <h1 className="text-brand-primary mt-4 text-3xl font-semibold tracking-tight dark:text-white lg:text-3xl lg:leading-tight">
         Tawfiq Hasan
       </h1>
-      <div className="mx-auto mt-3 flex max-w-xl flex-col px-5 text-center text-gray-500">
+      <div className="mx-auto mt-4 flex max-w-xl flex-col px-5 text-center text-gray-500">
         <p>
           Full Stack Developer and DevOps Enthusiast having more than 5 years of experience on
           building web application and mobile apps. A Team Lead at TheDeveloperX, specialized in
@@ -52,7 +52,7 @@ export default function Author({ children }) {
       <button
         onMouseEnter={hoveEnter}
         onMouseLeave={hoveLeave}
-        className="mt-3 group relative h-11 w-40 overflow-hidden rounded-3xl bg-white text-lg font-bold shadow"
+        className="mt-4 group relative h-11 w-40 overflow-hidden rounded-3xl bg-white text-lg font-bold shadow"
       >
         <div className="absolute inset-0 w-3 bg-green-500 transition-all duration-[250ms] ease-out group-hover:w-full"></div>
         <span className="relative text-black group-hover:text-white">{btnStr}</span>

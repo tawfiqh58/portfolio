@@ -10,7 +10,7 @@ import { ChevronDownIcon } from "@heroicons/react/24/solid";
 
 export default function Navbar() {
   const props = {
-    logo: "logo.svg",
+    logo: "/img/logo.svg",
     logoalt: "tawfiq hasan"
   };
   const leftmenu = [
@@ -63,6 +63,8 @@ export default function Navbar() {
                     {props.logo ? (
                       <Image
                         src={props.logo}
+                        height={40}
+                        width={100}
                         alt="Logo"
                         priority={true}
                         sizes="(max-width: 640px) 100vw, 200px"
