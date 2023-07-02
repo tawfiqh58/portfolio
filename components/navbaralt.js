@@ -5,7 +5,6 @@ import { Menu, Transition, Disclosure } from "@headlessui/react";
 import Container from "@/components/container";
 import Link from "next/link";
 import Image from "next/image";
-import { urlForImage } from "@/lib/sanity/image";
 import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
 import { myLoader } from "@/utils/all";
@@ -85,7 +84,7 @@ export default function NavbarAlt(props) {
                   <Link href="/" className="w-28 dark:hidden">
                     {props.logo ? (
                       <Image
-                        src={urlForImage(props.logo)}
+                        src={props.logo}
                         alt="Logo"
                         priority={true}
                         sizes="(max-width: 640px) 100vw, 200px"
@@ -99,7 +98,7 @@ export default function NavbarAlt(props) {
                   <Link href="/" className="hidden w-28 dark:block">
                     {props.logoalt ? (
                       <Image
-                        src={urlForImage(props.logoalt)}
+                        src={props.logoalt}
                         alt="Logo"
                         priority={true}
                         sizes="(max-width: 640px) 100vw, 200px"

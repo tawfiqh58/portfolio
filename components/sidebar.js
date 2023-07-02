@@ -1,5 +1,4 @@
 import SearchInput from "@/components/ui/search";
-import { urlForImage } from "@/lib/sanity/image";
 import Image from "next/image";
 import Link from "next/link";
 import Label from "@/components/ui/label";
@@ -42,9 +41,7 @@ function RelatedPosts({ related, pathPrefix }) {
       <h3 className="text-2xl font-bold dark:text-white">Related</h3>
       <div className="mt-6 grid gap-6">
         {related.slice(0, 3).map((item, index) => {
-          const imageProps = item?.image
-            ? urlForImage(item?.image)
-            : null;
+          const imageProps = item?.image || null;
           return (
             <Link
               key={index}

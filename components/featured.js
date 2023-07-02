@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { urlForImage } from "@/lib/sanity/image";
+import { urlForImage } from "@/lib//image";
 import { parseISO, format } from "date-fns";
 import { cx } from "@/utils/all";
 import Link from "next/link";
@@ -15,7 +15,7 @@ export default function Featured({ post, pathPrefix }) {
   return (
     <div
       className={cx(
-        "grid md:grid-cols-2 gap-5 md:gap-10 md:min-h-[calc(100vh-30vh)]"
+        "grid gap-5 md:min-h-[calc(100vh-30vh)] md:grid-cols-2 md:gap-10"
       )}
       style={{
         backgroundColor: post?.mainImage?.ImageColor || "black"
@@ -48,19 +48,19 @@ export default function Featured({ post, pathPrefix }) {
             post.slug.current
           }`}>
           <div className="max-w-2xl">
-            <h1 className="mt-2 mb-3 text-3xl font-semibold tracking-tight text-white lg:leading-tight text-brand-primary lg:text-5xl">
+            <h1 className="text-brand-primary mb-3 mt-2 text-3xl font-semibold tracking-tight text-white lg:text-5xl lg:leading-tight">
               {post.title}
             </h1>
 
-            <div className="flex mt-4 space-x-3 text-gray-500 md:mt-8 ">
-              <div className="flex flex-col gap-3 md:items-center md:flex-row">
+            <div className="mt-4 flex space-x-3 text-gray-500 md:mt-8 ">
+              <div className="flex flex-col gap-3 md:flex-row md:items-center">
                 <div className="flex items-center gap-3">
-                  <div className="relative flex-shrink-0 w-5 h-5">
+                  <div className="relative h-5 w-5 flex-shrink-0">
                     {AuthorimageProps && (
                       <Image
                         src={AuthorimageProps.src}
                         alt={post?.author?.name}
-                        className="object-cover rounded-full"
+                        className="rounded-full object-cover"
                         fill
                         sizes="100vw"
                       />
