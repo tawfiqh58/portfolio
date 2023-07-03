@@ -3,7 +3,7 @@ import Link from "next/link";
 import Container from "@/components/container";
 import { notFound } from "next/navigation";
 import { parseISO, format } from "date-fns";
-
+import DOMPurify from "isomorphic-dompurify";
 import CategoryLabel from "@/components/blog/category";
 
 export default function Post(props) {
@@ -16,6 +16,10 @@ export default function Post(props) {
   }
 
   const imageProps = post?.mainImage || null;
+
+  const sanitizedData = html => ({
+    __html: DOMPurify.sanitize(html)
+  });
 
   return (
     <>
@@ -62,7 +66,9 @@ export default function Post(props) {
       <Container>
         <article className="mx-auto max-w-screen-md ">
           <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
-            {post.body}
+            <div
+              dangerouslySetInnerHTML={sanitizedData(post.bodyHtml)}
+            />
           </div>
           <div className="mb-7 mt-7 flex justify-center">
             <Link
