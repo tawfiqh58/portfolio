@@ -9,6 +9,7 @@ import {
   ChevronRightIcon
 } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
+import { sampleData as sample } from "@/utils/sample";
 
 export default function Post({ posts: initialposts }) {
   const router = useRouter();
@@ -36,7 +37,7 @@ export default function Post({ posts: initialposts }) {
     error,
     isValidating
   } = {
-    data: [],
+    data: [sample],
     error: null,
     isValidating: false
   };
@@ -67,11 +68,11 @@ export default function Post({ posts: initialposts }) {
     <>
       <Container>
         <h1 className="text-center text-3xl font-semibold tracking-tight dark:text-white lg:text-4xl lg:leading-snug">
-          Archive
+          My Projects
         </h1>
         <div className="text-center">
           <p className="mt-2 text-lg">
-            See all posts we have ever written.
+            See all projects I have ever done.
           </p>
         </div>
         {posts && posts?.length === 0 && (

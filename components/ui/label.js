@@ -21,7 +21,7 @@ export default function Label(props) {
     return (
       <div
         className={
-          "inline-flex items-center justify-center font-bold px-2 h-6 text-sm bg-blue-50 text-blue-500 rounded-full shrink-0 dark:bg-gray-800 dark:text-gray-300"
+          "inline-flex h-6 shrink-0 items-center justify-center rounded-full bg-blue-50 px-2 text-sm font-bold text-blue-500 dark:bg-gray-800 dark:text-gray-300"
         }>
         {props.children}
       </div>
@@ -31,9 +31,9 @@ export default function Label(props) {
   return (
     <span
       className={cx(
-        "inline-block text-xs font-medium tracking-wider uppercase ",
+        "inline-block text-xs font-medium uppercase tracking-wider ",
         !margin && " mt-5",
-        color[props.color] || color[pink]
+        color[props.color] || color["pink"]
       )}>
       {props.children}
     </span>

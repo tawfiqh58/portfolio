@@ -15,7 +15,6 @@ export default function PostList({
   fontWeight
 }) {
   const imageProps = post?.mainImage || null;
-  const AuthorimageProps = post?.author?.image || null;
   return (
     <>
       <div
@@ -42,10 +41,6 @@ export default function PostList({
             {imageProps ? (
               <Image
                 src={imageProps.src}
-                {...(post.mainImage.blurDataURL && {
-                  placeholder: "blur",
-                  blurDataURL: post.mainImage.blurDataURL
-                })}
                 alt={post.mainImage.alt || "Thumbnail"}
                 priority={preloadImage ? true : false}
                 className="object-cover transition-all"
@@ -110,29 +105,6 @@ export default function PostList({
             </div>
 
             <div className="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400">
-              <Link
-                href={`/author/${post.author.slug.current}`}
-                legacyBehavior>
-                <div className="flex items-center gap-3">
-                  <div className="relative h-5 w-5 flex-shrink-0">
-                    {post.author.image && (
-                      <Image
-                        src={AuthorimageProps.src}
-                        alt={post?.author?.name}
-                        className="rounded-full object-cover"
-                        fill
-                        sizes="20px"
-                      />
-                    )}
-                  </div>
-                  <span className="truncate text-sm">
-                    {post.author.name}
-                  </span>
-                </div>
-              </Link>
-              <span className="text-xs text-gray-300 dark:text-gray-600">
-                &bull;
-              </span>
               <time
                 className="truncate text-sm"
                 dateTime={post?.publishedAt || post._createdAt}>
