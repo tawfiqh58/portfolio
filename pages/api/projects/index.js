@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     res.status(200).end();
   } else {
     const { method } = req;
-    console.log(method);
+
     switch (method) {
       case "GET":
         return getProjects(req, res);
