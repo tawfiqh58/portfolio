@@ -39,7 +39,7 @@ export default function Layout(props) {
       <div
         className={cx(
           props?.fontStyle,
-          "antialiased text-gray-800 dark:bg-black dark:text-gray-400"
+          "text-gray-800 antialiased dark:bg-black dark:text-gray-400"
         )}>
         {props.alternate ? (
           <NavbarAlt {...props} />

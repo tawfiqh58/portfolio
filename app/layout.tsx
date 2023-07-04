@@ -1,3 +1,4 @@
+import React from "react";
 import "@/styles/tailwind.css";
 import { cx } from "@/utils/all";
 import { Inter, Lora } from "next/font/google";

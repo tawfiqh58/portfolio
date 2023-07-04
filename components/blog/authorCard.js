@@ -25,9 +25,7 @@ export default function AuthorCard({ author }) {
               About {author.name}
             </h3>
           </div>
-          <div>
-            {author.bio}
-          </div>
+          <div>{author.bio}</div>
           <div className="mt-3">
             <Link
               href={`/author/${author.slug.current}`}

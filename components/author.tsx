@@ -6,7 +6,7 @@ import { useRouter } from "next/navigation";
 type AuthorType = {
   name: string;
 };
-export default function Author({ children }) {
+export default function Author() {
   const router = useRouter();
   const author: AuthorType = { name: "Tawfiq Hasan " };
   const [btnStr, setBtnStr] = useState("Free to work!");
