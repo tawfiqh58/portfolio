@@ -3,7 +3,7 @@ CREATE TABLE "Project" (
     "id" SERIAL NOT NULL,
     "title" TEXT NOT NULL,
     "body" TEXT NOT NULL,
-    "excerpt" TEXT NOT NULL,
+    "excerpt" TEXT,
     "publishedAt" TIMESTAMP(3) NOT NULL,
     "createdAt" TIMESTAMP(3) NOT NULL,
 

@@ -13,10 +13,7 @@ model Project {
   id          Int        @id @default(autoincrement())
   title       String
   body        String
-  excerpt     String
-  mainImage   MainImage?
-  slug        Slug?
-  categories  Category[]
+  excerpt     String?
   publishedAt DateTime
   createdAt   DateTime
   categories  Category[]
@@ -29,22 +26,14 @@ model MainImage {
   src       String
   small     String
   alt       String
-<<<<<<< HEAD
-  projectId Int  @unique
-=======
   projectId Int     @unique
->>>>>>> support
   project   Project @relation(fields: [projectId], references: [id])
 }
 
 model Slug {
   id        Int     @id @default(autoincrement())
   current   String
-<<<<<<< HEAD
-  projectId Int  @unique
-=======
   projectId Int     @unique
->>>>>>> support
   project   Project @relation(fields: [projectId], references: [id])
 }
 
