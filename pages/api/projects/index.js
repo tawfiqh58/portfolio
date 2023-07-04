@@ -93,6 +93,7 @@ async function updateProject(req, res) {
 
   const [newItems, removedItems, modifiedItems] =
     validateCategoryData(projectExists.categories, categories);
+
   const updateModel = {
     title,
     body,
