@@ -1,5 +1,4 @@
 import prisma from "../../../lib/prisma";
-import { v4 as uuidv4 } from "uuid";
 
 export default async function handler(req, res) {
   if (req.method === "OPTIONS") {
@@ -15,7 +14,7 @@ export default async function handler(req, res) {
     res.status(200).end();
   } else {
     const { method } = req;
-
+    console.log(method);
     switch (method) {
       case "GET":
         return getProjects(req, res);
@@ -41,48 +40,26 @@ async function getProjects(req, res) {
 }
 
 async function createProject(req, res) {
-  console.log(req.body);
-  const projectId = uuidv4();
-
   try {
-    const {
-      mainImage,
-      slug,
-      categories,
-      title,
-      body,
-      excerpt,
-      publishedAt,
-      createdAt
-    } = req.body;
+    const { mainImage, slug, categories, title, body, excerpt } =
+      req.body;
 
     const createdProject = await prisma.project.create({
       data: {
-        projectId: projectId,
+        title,
+        body,
+        excerpt,
         mainImage: {
           create: mainImage
         },
         slug: {
-          create: {
-            current: slug.current,
-            projectId: projectId
-          }
+          create: slug
         },
         categories: {
-          create: categories.map(category => ({
-            slug: {
-              create: {
-                current: category.slug.current,
-                projectId: projectId
-              }
-            }
-          }))
+          create: categories
         },
-        title,
-        body,
-        excerpt,
-        publishedAt: new Date(publishedAt),
-        createdAt: new Date(createdAt)
+        publishedAt: new Date(),
+        createdAt: new Date()
       }
     });
 
@@ -99,18 +76,87 @@ async function updateProject(req, res) {
   const projectExists = await prisma.project.findUnique({
     where: {
       id: parseInt(id)
+    },
+    include: {
+      mainImage: true,
+      slug: true,
+      categories: true
     }
   });
 
   if (!projectExists) {
     return res.status(404).json({ error: "Project not found" });
   }
-  delete req.body.id;
-  const project = await prisma.project.update({
+
+  const { mainImage, slug, categories, title, body, excerpt } =
+    req.body;
+
+  const [newItems, removedItems, modifiedItems] =
+    validateCategoryData(projectExists.categories, categories);
+  const updateModel = {
+    title,
+    body,
+    excerpt,
+    mainImage: {
+      update: {
+        src: mainImage.src,
+        small: mainImage.small,
+        alt: mainImage.alt
+      }
+    },
+    slug: {
+      update: {
+        current: slug.current
+      }
+    },
+    categories: {
+      updateMany: modifiedItems.map(category => ({
+        where: { id: category.id },
+        data: { slug: category.slug }
+      }))
+    },
+    publishedAt: new Date()
+  };
+
+  const updatedProject = await prisma.project.update({
     where: {
       id: parseInt(id)
     },
-    data: req.body
+    data: updateModel,
+    include: {
+      mainImage: true,
+      slug: true,
+      categories: true
+    }
   });
-  res.status(200).json(project);
+
+  for (const category of removedItems) {
+    await prisma.category.delete({
+      where: {
+        id: category.id
+      }
+    });
+  }
+
+  for (const category of newItems) {
+    await prisma.category.create({
+      data: { ...category, projectId: id }
+    });
+  }
+
+  res.status(200).json(updatedProject);
 }
+
+const validateCategoryData = (oldArray, newArray) => {
+  const newItems = newArray.filter(item => !item.id);
+  const removedItems = oldArray.filter(
+    oldItem => !newArray.some(newItem => newItem.id === oldItem.id)
+  );
+  const modifiedItems = newArray.filter(newItem =>
+    oldArray.some(
+      oldItem =>
+        oldItem.id === newItem.id && oldItem.slug !== newItem.slug
+    )
+  );
+  return [newItems, removedItems, modifiedItems];
+};
