@@ -2,17 +2,30 @@ import prisma from "../../../lib/prisma";
 import { v4 as uuidv4 } from "uuid";
 
 export default async function handler(req, res) {
-  const { method } = req;
+  if (req.method === "OPTIONS") {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader(
+      "Access-Control-Allow-Methods",
+      "GET, POST, PUT, DELETE, OPTIONS"
+    );
+    res.setHeader(
+      "Access-Control-Allow-Headers",
+      "X-Requested-With, Content-Type, Authorization"
+    );
+    res.status(200).end();
+  } else {
+    const { method } = req;
 
-  switch (method) {
-    case "GET":
-      return getProjects(req, res);
-    case "POST":
-      return createProject(req, res);
-    case "PUT":
-      return updateProject(req, res);
-    default:
-      return res.status(405).end();
+    switch (method) {
+      case "GET":
+        return getProjects(req, res);
+      case "POST":
+        return createProject(req, res);
+      case "PUT":
+        return updateProject(req, res);
+      default:
+        return res.status(405).end();
+    }
   }
 }
 
