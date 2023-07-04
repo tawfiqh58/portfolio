@@ -1,5 +1,5 @@
 // prod
-export const HOST_URL = "https://me.thedeveloperx.com";
+export const HOST_URL = "http://me.thedeveloperx.com";
 
 // dev
 // export const HOST_URL = "http://localhost:3000";

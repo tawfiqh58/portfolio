@@ -3,7 +3,6 @@ import Container from "@/components/container";
 import PostList from "@/components/postlist";
 
 export default function Post({ posts }) {
-  console.log(posts);
   return (
     <>
       {posts && (
