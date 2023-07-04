@@ -6,13 +6,7 @@ const nextConfig = {
     appDir: true
   },
   images: {
-    formats: [
-      "image/avif",
-      "image/png",
-      "image/jpg",
-      "image/jped",
-      "image/webp"
-    ],
+    formats: ["image/avif", "image/webp"],
     dangerouslyAllowSVG: true
   },
   typescript: {
