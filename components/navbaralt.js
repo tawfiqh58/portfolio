@@ -7,7 +7,6 @@ import Link from "next/link";
 import Image from "next/image";
 import cx from "clsx";
 import { ChevronDownIcon } from "@heroicons/react/24/solid";
-import { myLoader } from "@/utils/all";
 import SearchInput from "./ui/search";
 
 export default function NavbarAlt(props) {

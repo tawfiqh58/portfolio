@@ -3,6 +3,7 @@ import Container from "@/components/container";
 import PostList from "@/components/postlist";
 
 export default function Post({ posts }) {
+  console.log(posts);
   return (
     <>
       {posts && (
@@ -15,7 +16,7 @@ export default function Post({ posts }) {
           <div className="grid gap-10 md:grid-cols-2 lg:gap-10 ">
             {posts.slice(0, 4).map(post => (
               <PostList
-                key={post._id}
+                key={post.id}
                 post={post}
                 aspect="landscape"
                 preloadImage={true}

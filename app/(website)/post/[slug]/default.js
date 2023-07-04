@@ -38,9 +38,9 @@ export default function Post(props) {
               <div className="flex items-center space-x-2 text-sm">
                 <time
                   className="text-gray-500 dark:text-gray-400"
-                  dateTime={post?.publishedAt || post._createdAt}>
+                  dateTime={post?.publishedAt || post.createdAt}>
                   {format(
-                    parseISO(post?.publishedAt || post._createdAt),
+                    parseISO(post?.publishedAt || post.createdAt),
                     "MMMM dd, yyyy"
                   )}
                 </time>
@@ -66,9 +66,7 @@ export default function Post(props) {
       <Container>
         <article className="mx-auto max-w-screen-md ">
           <div className="prose mx-auto my-3 dark:prose-invert prose-a:text-blue-600">
-            <div
-              dangerouslySetInnerHTML={sanitizedData(post.bodyHtml)}
-            />
+            <div dangerouslySetInnerHTML={sanitizedData(post.body)} />
           </div>
           <div className="mb-7 mt-7 flex justify-center">
             <Link

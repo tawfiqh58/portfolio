@@ -15,6 +15,7 @@ export default function PostList({
   fontWeight
 }) {
   const imageProps = post?.mainImage || null;
+  console.log(post);
   return (
     <>
       <div

@@ -1,7 +1,7 @@
 import HomePage from "./home";
-import { sampleData } from "@/utils/sample";
-export default async function IndexPage() {
-  const posts = [sampleData, sampleData, sampleData, sampleData];
+import { getPorojects } from "@/lib/data";
 
+export default async function IndexPage() {
+  const posts = await getPorojects();
   return <HomePage posts={posts} />;
 }

@@ -1,12 +1,10 @@
 export const sampleData = {
-  _id: 1,
+  id: 1,
+  projectId: "some=racngodx",
   mainImage: {
-    src: "/img/image.avif"
-  },
-  author: {
-    image: {
-      src: "/author.jpg"
-    }
+    src: "/img/image.avif",
+    small: "/img/image-small.avif",
+    alt: "alter text"
   },
   slug: {
     current: "example-post"
@@ -16,48 +14,35 @@ export const sampleData = {
       slug: {
         current: "A-post"
       }
-    },
-    {
-      slug: {
-        current: "B-post"
-      }
     }
   ],
   title:
     "Architectural Engineering Wonders of the modern era for your Inspiration",
-  bodyHtml: `<h2>Short Review of iPhone 14 Pro Max</h2><p>The<strong> Apple iPhone 14 Pro Max </strong>is now available in four variants 128GB/6GB, 256GB/6GB, 512GB/6GB, and <strong>1TB</strong>. Now, 14 Pro Max’s Price is <strong>150000 </strong>taka Bangladesh. iPhone 14 Pro Max has a <strong>4323mAh</strong> battery with fast charging. This device is running with <strong>iOS 16</strong> and is powered by the <strong>Apple A16 Bionic (5 nm)</strong> chipset.</p><p>The Apple iPhone 14 Pro Max is one of the most highly anticipated smartphones of the year. As with all Apple products, this device is expected to be packed with innovative features, sleek design, and exceptional performance.</p><h2>Design and Display</h2><p>The iPhone 14 Pro Max is expected to feature a sleek and sophisticated design with a large <strong>6.7-inch OLED</strong> display. The device has a <strong>punch-hole</strong> camera, which will give the phone a modern and minimalist look. The display is also expected to be equipped with the <a href=\"https://www.mobileinfo.com.bd/reviews\">latest</a> <strong>Apple technology</strong>, including a <strong>120Hz</strong> refresh rate, which will provide an incredibly smooth and responsive experience.</p><h2>Camera</h2><p>Apple has always been known for its exceptional camera technology, and the <strong>iPhone 14 Pro Max</strong> is expected to continue this trend. The device is rumored to have a triple-lens rear camera, which will include a wide-angle lens, an ultra-wide-angle lens, and a telephoto lens. Additionally, the front-facing camera is expected to be upgraded with a higher resolution, providing clearer and more detailed selfies.</p><h2>Performance</h2><p>The iPhone 14 Pro Max is powered by the latest Apple A16 Bionic chip, which will provide lightning-fast performance and exceptional battery life. This chip is expected to be faster and more efficient than the A15 chip found in the current iPhone models, allowing users to run multiple apps simultaneously without any lag.</p><h2>Connectivity</h2><p>The iPhone 14 Pro Max is equipped with <strong>5G connectivity</strong>, allowing users to enjoy lightning-fast download and upload speeds. Additionally, the device includes <strong>Wi-Fi 6E</strong> support, which will provide faster Wi-Fi speeds and greater range.</p><h2>Operating System</h2><p>The iPhone 14 Pro Max is to run on the latest version of Apple's operating system, <strong>iOS 16</strong>. This operating system will provide users with an improved user interface, more intuitive navigation, and a range of new features.</p><h2>Storage and Pricing</h2><p>The iPhone 14 Pro Max is expected to come in three storage options: 128GB, 256GB, and 512 GB. The device is priced similarly to the iPhone 13 Pro Max, with the base model starting at around <strong>$1,099</strong>.</p><p>Overall, the Apple iPhone 14 Pro Max is shaping up to be an <strong>incredible device</strong>, packed with innovative features and cutting-edge technology. From its sleek design and stunning display to its powerful performance and an exceptional camera, this device is sure to impress even the most demanding users. Whether you're a business professional or a casual user, the iPhone 14 Pro Max is a smartphone that's worth considering.</p>`,
-  body: `Reinvention often comes in spurts, after a long period of silence. Just as modern architecture recently enjoyed a comeback, brand architecture, a field with well-established principles for decades, is back in the limelight.
+  body: `<p>The quick brown fox jumps over the lazy dog.</p>
 
-  Simply understood, brand architecture is the art and science of structuring the portfolio to meet your strategic goals, defining the brand number, scope, and relationships needed to compete. Just as Modern Architecture prioritized function, a Brand Architecture is only as good as it is well-suited for the purpose it strives to achieve. Given the disruption observed today across industries and segments, it’s no wonder that companies are considering structural rather than topical solutions to the challenges they face.
-  
-  Yet the context in which brand architecture decisions are being made has changed. Gone are the days of “competitive strategy”, with the military-inspired view of competition as a zero-sum game, where market share needs to be stolen from competitors, often in a street-by-street battle to win over each individual segment. The type of brand architecture required to win in this game demanded a dogged focus on each segment, and a sniper-like collection of individual brands sharply focused on each one. While there was always a place for a variety of architectures — see Joachimsthaler’s brand relationship spectrum — houses of brands were favored, as it enabled segment-by-segment competition and risk protection. P&G was the king of houses of brands, slicing and dicing the market not just by products and demographics, but also by psychographics, price range, buying patterns or attitudes. In B2B, houses of brands were omnipresent, with a product-driven logic that led to branding new features meant to provide short-term competitive advantage.
-  
-  In today’s day and age, companies like Google or Amazon do not pursue growth through incremental market share gains; rather, they focus on understanding their customers’ needs and creating entirely new markets to answer them. Creating a house of brands for these markets would be folly — not only would each brand need to be created from scratch, increasing the already significant investment, but the new category itself often needs to be explained to consumers, compounding the cost.
-  
-  Instead, investing in a strong master brand-led architecture and putting multiple if not all brands under the leadership of a strong brand, presents numerous advantages. First, mergers and acquisitions, or partnerships, are making it necessary to bring multiple market participants to “the same page” — and this common ground often involves a master brand recognized by all. Second, the risk profile of a “branded house” architecture has changed: the master brand can create an aura of innovation and risk-taking, supporting the launch of new products. Third, investments can be streamlined, as a strong master brand can be leveraged across markets and product launches. Finally, a track record of success in creating new categories can create goodwill, creating a virtual circle of success. To achieve this, brand architecture does not need to be a pure “branded house” — in many cases, a strong master brand creates substantial leverage and a much cleaner portfolio, even as a few particularly strong brands can continue existing as sub-brands. An example of this is Salesforce, that leverages its master brand consistently — yet allows more independence to a few specific sub-brands, such as Pardot.
-  
-  There are 3 key imperatives to build this type of brand architecture — to be clear, meaningful and stretchable.
-  
-  Clear: Just as modern architecture thrives on clear and clean lines, so does brand architecture. In the age of micro-segmentation, micro-targeting, information overload and digital fragmentation, you need a clear and loud voice in order to stand out. In the context of short attention spans where specific moments and needstates need to be targeted in addition to consumer/customer profiles, multiple brands often lead to confusion. The technology space understood this early, where clear and simple architectures that bring together simple design, as Apple, with complex technology, as SAP — always under the discipline of a rigorously simple way to organize.
-  
-  In addition, one of the key reasons for the regained popularity of clean, streamlined architectures, often organized around a single master brand, has been the emergence of platforms, or 2-way marketplaces structured around mutual value creation. By definition, bringing various stakeholder groups to one platform requires building a single brand, in order to enable network effects so critical for building scale. As Uber expands into different marketplaces and “uberizes” different industries, leveraging the power of its master brand is likely to lead to faster expansion than building a targeted brand for each industry from scratch.
-  
-  Meaningful: Just as modern architecture prioritizes function over embellishments, a solid brand architecture is founded on brands and values meaningful to consumers (or customers), rather than product feature distinctions. Brand architecture needs to be re-organized around brands that have a “reason for being” compelling enough to elicit passion, and introducing a clear distinction between brands that merit air time with consumers vs. “clutter”. The “decluttering” trend is gaining traction in brand architecture — just as in the popular consumer “decluttering” technique, only brands that “bring joy” to consumers get the spotlight. TED, for example, leverages the powerful TED master brand, positioned around “ideas worth spreading”, in a set of sub-brands that target meaningful occasions and contexts for intellectual exploration (TED Talks, TEDx, TED-Ed, TED Prize, TED Fellows, TED Institute, TED Radio Hour).
-  
-  Stretchable: Modern architecture is dynamic — it finds its force in the midst of usage; movement is often embedded into its very bones. In today’s fast-changing world, brand architecture is a moving target — clients increasingly ask to design architectures that fit their growth ambitions, thinking through future growth scenarios and architecting space for the future product pipeline. In particular in industries undergoing disruption, where next generation products aim to upset the status quo, their addition to any brand architecture may require a fundamental rethink.
-  
-  Much as strategy has become “real time” as the window for strategic planning has shortened, brand architecture is also becoming more “real time”, requiring more frequent reassessment, adaptations and flexibility as markets change. Witness the frequency with which Uber readjusts its portfolio. WeWork, the popular co-working space, also exploits the strength of the master brand to stretch into near-in categories such as hospitality with WeLive or the ventures space with WeWork Labs.
-  
-  Traditionally, companies considered a house of brands architecture as a risk management tool — a way not to put all your eggs in one basket. It turns out, in the age of platforms and digital disruption, a masterbrand-led architecture can help you build a bigger basket, to hold more eggs.`,
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed euismod, velit vel bibendum bibendum, sapien sapien bibendum nunc, vel bibendum sapien sapien nec velit. Donec euismod, velit vel bibendum bibendum, sapien sapien bibendum nunc, vel bibendum sapien sapien nec velit.</p>
+    
+    <p>Here's some <strong>bold text</strong> and some <em>italic text</em>.</p>
+    
+    <p>Here's a list:</p>
+    <ul>
+    <li>Item 1</li>
+    <li>Item 2</li>
+    <li>Item 3</li>
+    </ul>
+    
+    <blockquote>
+    <p>The best way to predict the future is to invent it.</p>
+    </blockquote>
+    
+    <p>Here's a link: <a href="https://www.google.com/">Google</a></p>
+    
+    <p>Here's an image:</p>
+    <p><img src="https://picsum.photos/200/300" alt="alt text" /></p>
+    `,
   excerpt: "This is an example post excerpt.",
-  author: {
-    name: "John Doe",
-    slug: {
-      current: "john-doe"
-    }
-  },
   publishedAt: "2023-06-30T12:00:00Z",
-  _createdAt: "2023-06-29T10:30:00Z"
+  createdAt: "2023-06-29T10:30:00Z"
 };
 
 export const sampleData2 = {
