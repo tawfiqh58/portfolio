@@ -1,6 +1,18 @@
 import prisma from "../../../lib/prisma";
 
 export default async function handler(req, res) {
+  // if (req.method === "OPTIONS") {
+  //   res.setHeader("Access-Control-Allow-Origin", "*");
+  //   res.setHeader(
+  //     "Access-Control-Allow-Methods",
+  //     "GET, POST, PUT, DELETE, OPTIONS"
+  //   );
+  //   res.setHeader(
+  //     "Access-Control-Allow-Headers",
+  //     "X-Requested-With, Content-Type, Authorization"
+  //   );
+  //   res.status(200).end();
+  // } else {
   const { method } = req;
 
   switch (method) {
@@ -11,6 +23,7 @@ export default async function handler(req, res) {
     default:
       return res.status(405).end();
   }
+  // }
 }
 
 async function getProjectById(req, res) {
