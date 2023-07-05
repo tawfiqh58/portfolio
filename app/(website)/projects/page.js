@@ -1,13 +1,8 @@
 import Archive from "./project";
-
-const POSTS_PER_PAGE = 6;
-
-async function getPaginatedPosts(count) {
-  return [];
-}
+import { getPorojects } from "@/lib/data";
 
 export default async function ArchivePage() {
-  const posts = await getPaginatedPosts(POSTS_PER_PAGE);
+  const posts = await getPorojects();
   return <Archive posts={posts} />;
 }
 

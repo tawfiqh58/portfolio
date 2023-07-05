@@ -23,8 +23,8 @@ export default function Featured({ post, pathPrefix }) {
       {imageProps && (
         <div className="relative aspect-video md:aspect-auto">
           <Link
-            href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${
-              post.slug.current
+            href={`/projects/${pathPrefix ? `${pathPrefix}/` : ""}${
+              post.id
             }`}>
             <Image
               src={imageProps.src}
@@ -44,8 +44,8 @@ export default function Featured({ post, pathPrefix }) {
 
       <div className="self-center px-5 pb-10">
         <Link
-          href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${
-            post.slug.current
+          href={`/projects/${pathPrefix ? `${pathPrefix}/` : ""}${
+            post.id
           }`}>
           <div className="max-w-2xl">
             <h1 className="text-brand-primary mb-3 mt-2 text-3xl font-semibold tracking-tight text-white lg:text-5xl lg:leading-tight">

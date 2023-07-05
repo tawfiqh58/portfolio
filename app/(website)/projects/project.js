@@ -9,7 +9,6 @@ import {
   ChevronRightIcon
 } from "@heroicons/react/24/outline";
 import { useState, useEffect } from "react";
-import { sampleData as sample } from "@/utils/sample";
 
 export default function Post({ posts: initialposts }) {
   const router = useRouter();
@@ -37,7 +36,7 @@ export default function Post({ posts: initialposts }) {
     error,
     isValidating
   } = {
-    data: [sample],
+    data: initialposts,
     error: null,
     isValidating: false
   };
@@ -95,7 +94,7 @@ export default function Post({ posts: initialposts }) {
         {posts && !isLoading && !isValidating && (
           <div className="mt-10 grid gap-10 md:grid-cols-2 lg:gap-10 xl:grid-cols-3">
             {posts.map(post => (
-              <PostList key={post._id} post={post} aspect="square" />
+              <PostList key={post.id} post={post} aspect="square" />
             ))}
           </div>
         )}

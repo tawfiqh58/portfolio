@@ -35,8 +35,8 @@ export default function PostList({
                 ? "aspect-[5/4]"
                 : "aspect-square"
             )}
-            href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${
-              post.slug.current
+            href={`/projects/${pathPrefix ? `${pathPrefix}/` : ""}${
+              post.id
             }`}>
             {imageProps ? (
               <Image
@@ -74,9 +74,9 @@ export default function PostList({
                 "mt-2    dark:text-white"
               )}>
               <Link
-                href={`/post/${pathPrefix ? `${pathPrefix}/` : ""}${
-                  post.slug.current
-                }`}>
+                href={`/projects/${
+                  pathPrefix ? `${pathPrefix}/` : ""
+                }${post.id}`}>
                 <span
                   className="bg-gradient-to-r from-green-200 to-green-100 bg-[length:0px_10px] bg-left-bottom
       bg-no-repeat
@@ -94,9 +94,9 @@ export default function PostList({
               {post.excerpt && (
                 <p className="mt-2 line-clamp-3 text-sm text-gray-500 dark:text-gray-400">
                   <Link
-                    href={`/post/${
+                    href={`/projects/${
                       pathPrefix ? `${pathPrefix}/` : ""
-                    }${post.slug.current}`}
+                    }${post.id}`}
                     legacyBehavior>
                     {post.excerpt}
                   </Link>
@@ -107,9 +107,9 @@ export default function PostList({
             <div className="mt-3 flex items-center space-x-3 text-gray-500 dark:text-gray-400">
               <time
                 className="truncate text-sm"
-                dateTime={post?.publishedAt || post._createdAt}>
+                dateTime={post?.publishedAt || post.createdAt}>
                 {format(
-                  parseISO(post?.publishedAt || post._createdAt),
+                  parseISO(post?.publishedAt || post.createdAt),
                   "MMMM dd, yyyy"
                 )}
               </time>
