@@ -60,40 +60,24 @@ async function deleteProject(req, res) {
     return res.status(404).json({ error: "Project not found" });
   }
 
-  const mainImage = await prisma.mainImage.findUnique({
+  await prisma.mainImage.deleteMany({
     where: {
-      projectId: projectExists.projectId
+      projectId: projectExists.id
     }
   });
-
-  if (mainImage) {
-    await prisma.mainImage.delete({
-      where: {
-        id: mainImage.id
-      }
-    });
-  }
-
-  const categories = await prisma.category.findMany({
+  await prisma.slug.deleteMany({
     where: {
-      projectId: projectExists.projectId
+      projectId: projectExists.id
     }
   });
-
-  for (const category of categories) {
-    await prisma.category.delete({
-      where: {
-        id: category.id
-      }
-    });
-  }
-
+  await prisma.category.deleteMany({
+    where: {
+      projectId: projectExists.id
+    }
+  });
   await prisma.project.delete({
     where: {
-      id: parseInt(id)
-    },
-    include: {
-      slug: true
+      id: projectExists.id
     }
   });
 
